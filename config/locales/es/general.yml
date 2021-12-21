@@ -127,9 +127,7 @@ es:
     new:
       form:
         submit_button: Empieza un debate
-      info: Si lo que quieres es hacer una propuesta, esta es la sección incorrecta, entra en %{info_link}.
-      info_link: crear nueva propuesta
-      more_info: Más información
+      more_info: "¿Cómo funcionan los debates?"
       recommendation_four: Disfruta de este espacio, de las voces que lo llenan, también es tuyo.
       recommendation_one: No escribas el título del debate o frases enteras en mayúsculas. En internet eso se considera gritar. Y a nadie le gusta que le griten.
       recommendation_three: Las críticas despiadadas son muy bienvenidas. Este es un espacio de pensamiento. Pero te recomendamos conservar la elegancia y la inteligencia. El mundo es mejor con ellas presentes.
@@ -226,7 +224,6 @@ es:
     header:
       administration_menu: Menú
       administration: Administración
-      available_locales: Idiomas disponibles
       collaborative_legislation: Legislación colaborativa
       debates: Debates
       locale: "Idioma:"
@@ -526,7 +523,7 @@ es:
       comments: Comentarios
       latest_comments: Últimos mensajes
     messages:
-      send_notification: Enviar mensaje a los que siguen la propuesta
+      send_notification: Enviar notificación a los que siguen la propuesta
       previous_notifications: Ver notificaciones anteriores
     polls:
       index:
@@ -661,9 +658,9 @@ es:
       voted: "Has votado %{answer}"
   proposal_notifications:
     new:
-      title: "Enviar mensaje"
-      submit_button: "Enviar mensaje"
-      info_about_receivers: "Este mensaje se enviará a <strong>%{count} usuarios</strong> y se publicará en %{proposal_page}.<br> El mensaje no se enviará inmediatamente, los usuarios recibirán periódicamente un email con todas las notificaciones de propuestas."
+      title: "Enviar notificación"
+      submit_button: "Enviar notificación"
+      info_about_receivers: "Esta notificación se enviará a <strong>%{count} usuarios</strong> y se publicará en %{proposal_page}.<br> Las notificaciones no se enviarán inmediatamente, los usuarios recibirán periódicamente un email con todas las notificaciones de propuestas."
       proposal_page: "la página de la propuesta"
     show:
       back: "Volver a mi contenido"
@@ -672,12 +669,10 @@ es:
     filter: "Filtrar"
     save: "Guardar"
     delete: "Borrar"
-    "yes": "Si"
+    "yes": "Sí"
     "no": "No"
     search_results: "Resultados de la búsqueda"
     advanced_search:
-      author_type: "Por categoría de autor"
-      author_type_blank: "Elige una categoría"
       date: "Por fecha"
       date_placeholder: "DD/MM/AAAA"
       date_range_blank: "Elige una fecha"
@@ -688,7 +683,6 @@ es:
       date_5: "Personalizada"
       from: "Desde"
       general: "Con el texto"
-      general_placeholder: "Escribe el texto"
       goal: "Por ODS"
       goal_blank: "Elige un objetivo"
       search: "Filtrar"
@@ -775,6 +769,8 @@ es:
         zero: "0 idiomas en uso"
         one: "1 idioma en uso"
         other: "%{count} idiomas en uso"
+    optional: "Campos opcionales"
+    required: "Campos obligatorios"
   social:
     facebook: "Facebook de %{org}"
     twitter: "Twitter de %{org}"
@@ -966,7 +962,11 @@ es:
       enqueue_remote_translation: Se han solicitado correctamente las traducciones.
     button: Traducir página
   tags:
-    filter:
-      more:
-        one: "Una etiqueta más"
-        other: "%{count} etiquetas más"
+    list:
+      filter:
+        more:
+          one: "Una etiqueta más"
+          other: "%{count} etiquetas más"
+  machine_learning:
+    comments_summary: "Resumen de comentarios"
+    info_text: "Contenido generado mediante IA / Machine Learning"

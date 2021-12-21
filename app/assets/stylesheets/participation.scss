@@ -244,71 +244,23 @@
 // 02. New participation
 // ---------------------
 
-.debate-form,
-.proposal-form,
-.budget-investment-form,
-.document-form,
-.topic-new,
-.topic-form {
-
-  .icon-debates,
-  .icon-proposals,
-  .icon-budget,
-  .icon-image {
-    font-size: rem-calc(50);
-    line-height: $line-height;
-    opacity: 0.5;
-  }
-
-  .icon-debates {
-    color: $debates;
-  }
-
-  .icon-proposals,
-  .icon-image {
-    color: $proposals;
-  }
-
-  .icon-budget {
-    color: $budget;
-  }
-}
-
 .recommendations {
   list-style-type: none;
   margin-left: 0;
   margin-top: $line-height;
 
   li {
-    font-size: $small-font-size;
+    @include has-fa-icon(check, solid);
     margin: $line-height / 2 0;
 
     &::before {
-      content: "l ";
-      font-family: "icons" !important;
+      margin-right: $font-icon-margin * 1.5;
     }
   }
 }
 
-.debate-form {
-
-  .recommendations li::before {
-    color: $debates;
-  }
-}
-
-.proposal-form,
-.document-form,
-.topic-form,
-.topic-new {
-
-  .recommendations li::before {
-    color: $proposals;
-  }
-}
-
 .budget-investment-new,
-.proposal-form,
+.proposal-new,
 .proposal-edit,
 .polls-form,
 .poll-question-form,
@@ -530,6 +482,7 @@
   }
 
   .filter-subnav {
+    @include full-width-background;
     background: $highlight;
     margin-bottom: $line-height;
     padding-top: $line-height / 4;
@@ -550,7 +503,6 @@
 
 .debates-list,
 .proposals-list,
-.investment-projects-list,
 .budget-investments-list {
 
   @include breakpoint(medium) {
@@ -558,11 +510,14 @@
   }
 }
 
-.investment-projects-list,
 .budget-investments-list {
 
   @include breakpoint(medium) {
     min-height: $line-height * 15;
+
+    .with-image > .row {
+      display: flex;
+    }
   }
 }
 
@@ -592,6 +547,7 @@
     }
 
     img {
+      height: 100%;
       max-width: 12rem;
     }
   }
@@ -819,10 +775,6 @@
         cursor: pointer;
       }
 
-      &:focus {
-        outline: $outline-focus;
-      }
-
       &:active {
         opacity: 0.75;
       }
@@ -900,8 +852,9 @@
 
 .help-header,
 .section-header {
+  @include full-width-background;
+  @include full-width-border(bottom, 1px solid #eee);
   background: #fafafa;
-  border-bottom: 1px solid #eee;
   margin-top: -$line-height;
   margin-bottom: $line-height;
   padding-bottom: $line-height / 2;
@@ -1019,6 +972,15 @@
   }
 }
 
+.search-results-summary {
+  @include full-width-background;
+  background: $highlight;
+  margin-bottom: $line-height;
+  margin-top: -$line-height;
+  padding-bottom: $line-height;
+  padding-top: $line-height;
+}
+
 // 05. Featured
 // ------------
 
@@ -1132,7 +1094,8 @@
 // -----------
 
 .budget-header {
-  @extend %brand-background;
+  @extend %budget-header;
+
   margin-top: -$line-height;
   min-height: $line-height * 25;
   padding-bottom: $line-height;
@@ -1142,6 +1105,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  h1 {
+    padding-top: $line-height * 2;
   }
 
   .budget-title {
@@ -1156,25 +1123,6 @@
       display: block;
       width: 20%;
     }
-  }
-
-  h1 {
-    font-size: rem-calc(60);
-    padding: $line-height * 2 0 $line-height;
-  }
-
-  h1,
-  h2,
-  p,
-  a,
-  .back,
-  .icon-angle-left,
-  .description {
-    color: inherit;
-  }
-
-  a {
-    text-decoration: underline;
   }
 
   .confirmed {
@@ -1202,8 +1150,8 @@
 }
 
 .jumbo-budget {
+  @include full-width-border(bottom, 2px solid $border);
   background: $body-background;
-  border-bottom: 2px solid $border;
 
   &.budget-heading {
     min-height: $line-height * 10;
@@ -1434,6 +1382,7 @@
 .budgets-stats {
 
   .header {
+    @include full-width-background;
     background: $highlight;
   }
 
@@ -1554,12 +1503,12 @@
 // ----------------------
 
 .polls-show-header {
+  @include full-width-background;
   background: #fafafa;
 }
 
 .poll-more-info,
 .poll-more-info-answers {
-  border-top: 1px solid #eee;
 
   .read-more {
     margin-bottom: $line-height;
@@ -1571,9 +1520,15 @@
   }
 }
 
+.poll-more-info {
+  border-top: 1px solid #eee;
+}
+
 .poll-more-info-answers {
+  @include full-width-background;
+  @include full-width-border(top, 1px solid #eee);
+  @include full-width-border(bottom, 1px solid #eee);
   background: #fafafa;
-  border-bottom: 1px solid #eee;
 
   .column:nth-child(odd) {
     border-right: 2px solid;

@@ -4,11 +4,16 @@
 // folder and they will be loaded automatically.
 
 // Header
+header {
+  margin-bottom: 0;
+}
 .top-bar-title {
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 200px;
-  height: auto;
+  img {
+    max-width: 200px;
+    height: auto;
+  }
 }
 
 // Sign In
@@ -16,7 +21,6 @@
   background-image: none;
   background-color: $brand;
 }
-
 
 .welcome {
   margin-top: -$line-height;

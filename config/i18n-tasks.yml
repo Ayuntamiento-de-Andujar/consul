@@ -160,7 +160,6 @@ ignore_unused:
   - "admin.legislation.draft_versions.*.submit_button"
   - "admin.legislation.questions.*.submit_button"
   - "admin.hidden_comments.index.hidden_*"
-  - "admin.settings.index.features.*"
   - "admin.polls.*.submit_button"
   - "admin.booths.*.submit_button"
   - "admin.admin_notifications.*.submit_button"
@@ -218,10 +217,11 @@ ignore_unused:
   - landings.cambia_tu_ciudad.*
   - "seeds.settings.*"
   - "dashboard.polls.*.submit"
+  - "related_content.content_title.*"
   - "sdg.goals.goal_*"
   - "sdg.*.filter.more.*"
   - "sdg_management.relations.index.filter*"
-  - "tags.filter.more.*"
+  - "tags.list.filter.more.*"
 ####
 ## Exclude these keys from the `i18n-tasks eq-base" report:
 # ignore_eq_base:
